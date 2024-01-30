@@ -1,0 +1,97 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "rahman",
+  "password" : "rahasia",
+  "name" : "rahman"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "rahman",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 160a611b-e50f-470c-ab5f-fdf0da303139
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 160a611b-e50f-470c-ab5f-fdf0da303139
+
+{
+  "name" : "saya"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 44e7e0c9-9492-47d6-809f-282cfff23e40
+
+###
+
+POST http://localhost:3000/api/sepatu
+Content-Type: application/json
+Accept: application/json
+Authorization: 160a611b-e50f-470c-ab5f-fdf0da303139
+
+{
+  "merk": "Nike",
+  "ukuran": "42.5",
+  "harga" : 250000,
+  "stok" : 100,
+  "warna" : "hitam"
+}
+
+
+###
+
+GET http://localhost:3000/api/sepatu
+Content-Type: application/json
+Accept: application/json
+Authorization:  160a611b-e50f-470c-ab5f-fdf0da303139
+
+###
+
+GET http://localhost:3000/api/sepatu/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 160a611b-e50f-470c-ab5f-fdf0da303139
+
+###
+
+PUT http://localhost:3000/api/sepatu/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 44e7e0c9-9492-47d6-809f-282cfff23e40
+
+{
+  "merk": "Adidas",
+  "ukuran": "42.5",
+  "harga" : 250000,
+  "stok" : 100,
+  "warna" : "hitam"
+}
+
+###
+
+DELETE http://localhost:3000/api/sepatu/2
+Content-Type: application/json
+Accept: application/json
+Authorization: 160a611b-e50f-470c-ab5f-fdf0da303139
